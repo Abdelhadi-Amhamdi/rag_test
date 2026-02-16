@@ -1,0 +1,5 @@
+.venv
+test.md
+.env
+/vector_store/*
+__pycache__
