@@ -33,6 +33,23 @@ GOOGLE_GEMINI_API_KEY=APIKEY_HERE
 
 ```
 
+Avant de démarrer le backend, il est obligatoire de générer les embeddings et les index vectoriels.
+
+Exécutez la commande suivante :
+
+```bash
+python3 indexing/index.py
+```
+
+Ce script :
+
+- Charge les documents des deux clients
+- Génère les embeddings
+- Crée les index vectoriels nécessaires à la recherche
+- Sauvegarde les index pour une utilisation ultérieure par l’API
+
+Cette étape doit être exécutée une seule fois (ou à chaque modification des documents).
+
 ### 4. Démarrer le Backend
 
 ```bash
@@ -221,6 +238,23 @@ clientB=tenantB_key
 GOOGLE_GEMINI_API_KEY=APIKEY_HERE
 
 ```
+
+Before starting the backend, you must generate the embeddings and vector indexes.
+
+Run the following command:
+
+```bash
+python3 indexing/index.py
+```
+
+This script:
+
+- Loads the documents for both clients
+- Generates embeddings
+- Builds the required vector indexes for search
+- Saves the indexes for later use by the API
+
+This step only needs to be executed once (or whenever documents are modified).
 
 ### 1. Start the Backend
 
